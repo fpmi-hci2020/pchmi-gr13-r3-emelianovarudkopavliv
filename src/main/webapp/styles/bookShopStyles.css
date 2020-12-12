@@ -1,0 +1,9 @@
+body{
+  background-color: #F5E1FF; /* ÷вет фона веб-страницы */
+}
+
+.title {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: #1E0340;
+}

@@ -1,0 +1,13 @@
+body{
+    background-color: #F5E1FF; /* ÷вет фона веб-страницы */
+}
+
+.button_first {
+    color: white;
+    background-color: #652270;
+    border: #652270;
+    width: 100px;
+    height: 40px
+}
+
+
