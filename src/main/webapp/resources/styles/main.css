@@ -1,0 +1,95 @@
+body{
+    background-color: #F5E1FF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.my_header_text {
+    background-color: #3F014C;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+header{
+    background-color: #3F014C;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.button_first {
+    color: white;
+    background-color: #652270;
+    border: #652270;
+    width: 100px;
+    height: 40px
+}
+
+.layer1{
+    margin-left: 96px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.li_menu{
+    display: inline;
+    font-size: 30px;
+}
+
+.text_b {
+    color: #1E0340;
+    font-size: 24px;
+}
+
+a.text18 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+div.text20 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+}
+
+div.text40 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+}
+
+div.text50 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+}
+
+div.text30 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 30px;
+}
+
+div.text72 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 60px;
+}
+
+.text24 {
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+div.price72 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 60px;
+    font-style: italic;
+}
+
+div.price100 {
+    color: #1E0340;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 100px;
+}
+

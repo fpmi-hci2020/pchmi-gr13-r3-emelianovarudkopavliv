@@ -1,11 +1,10 @@
 package org.phci.controller;
 
-import org.phci.core.model.Book;
-import org.phci.core.model.RestTemplateBookDao;
+import org.phci.core.model.book.Book;
+import org.phci.core.model.book.RestTemplateBookDao;
 import org.phci.dto.AddToCartForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -43,9 +42,9 @@ public class ProductListPageController {
                 Objects.toString(params.get(QUERY_PRODUCT), DEFAULT_QUERY_PRODUCT),
                 Objects.toString(params.get(SEARCH_FIELD), DEFAULT_SEARCH_FIELD));
         model.addAttribute(BOOKS, books);
-        List<Long> ids = books.stream().map(Book::getId).collect(Collectors.toList());
+        List<Integer> ids = books.stream().map(Book::getId).collect(Collectors.toList());
         List<String> covers = new ArrayList<>();
-        for (Long key: ids) {
+        for (Integer key: ids) {
             try {
                 covers.add(bookDao.getBookCover(key));
             } catch (IOException e) {

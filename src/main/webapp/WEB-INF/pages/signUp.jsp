@@ -5,23 +5,33 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <tags:master1 pageTitle="Sign up form">
-    <div>
+    <div class="row justify-content-center">
         <form:form method="post" modelAttribute="signUpForm">
             <div>
+                <div class="row justify-content-center">
+                    Sign up
+                </div>
+                <br>
                 <div><form:label path="login">Login&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</form:label><form:input path="login" /></div>
                 <br>
-                <div><form:label path="password">Password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</form:label><form:input path="password" /></div>
+                <div><form:label path="password">Password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</form:label><form:input path="password" /></div>
                 <br>
-                <div><form:label path="repeatPassword">Repeat password&nbsp&nbsp&nbsp&nbsp&nbsp</form:label><form:input path="repeatPassword" /></div>
+                <div><form:label path="repeatPassword">Repeat password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</form:label><form:input path="repeatPassword" /></div>
                 <br>
-                <div>
-                    <button form="toSignInForm" formaction="${pageContext.servletContext.contextPath}/signIn" style="color: white; background-color: #652270; border: #652270; width: 100px; height: 40px">
-                        To Sign in
-                    </button>
-                    <button style="color: white; background-color: #652270; border: #652270; width: 100px; height: 40px">
-                        Sign up
-                    </button>
+                <div class="row justify-content-center">
+                    <div class="d-inline-block">
+                        <button form="toSignInForm" formaction="${pageContext.servletContext.contextPath}/signIn" style="color: white; background-color: #652270; border: #652270; width: 120px; height: 40px">
+                            To Sign in
+                        </button>
+                    </div>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <div class="d-inline-block">
+                        <button style="color: white; background-color: #652270; border: #652270; width: 100px; height: 40px">
+                            Sign up
+                        </button>
+                    </div>
                 </div>
+                <br>
             </div>
         </form:form>
     </div>

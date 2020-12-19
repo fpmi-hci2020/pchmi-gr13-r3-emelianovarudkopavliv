@@ -1,12 +1,9 @@
 package org.phci.controller;
 
-import org.phci.core.model.Account;
-import org.phci.core.model.RestTemplateAccountDao;
-import org.phci.dto.SignInForm;
+import org.phci.core.model.account.Account;
+import org.phci.core.model.account.RestTemplateAccountDao;
 import org.phci.dto.SignUpForm;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,4 @@
-package org.phci.core.model;
-
-import org.springframework.http.HttpStatus;
+package org.phci.core.model.account;
 
 public interface AccountDao {
     Account get(String email);

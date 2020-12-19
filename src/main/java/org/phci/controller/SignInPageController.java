@@ -1,9 +1,10 @@
 package org.phci.controller;
 
-import org.phci.core.model.Account;
-import org.phci.core.model.RestTemplateAccountDao;
+import org.phci.core.model.account.Account;
+import org.phci.core.model.account.RestTemplateAccountDao;
 import org.phci.dto.SignInForm;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,11 +39,12 @@ public class SignInPageController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public RedirectView signIn(@ModelAttribute @Valid SignInForm signInForm, BindingResult result, RedirectAttributes attributes, HttpServletRequest request) {
+    public RedirectView signIn(@ModelAttribute @Valid SignInForm signInForm, Model model,  RedirectAttributes attributes, HttpServletRequest request) {
 
         Account account = accountDao.get(signInForm.getLogin());
         if (account != null) {
             attributes.addFlashAttribute(EMAIL, account.getEmail());
+            model.addAttribute(EMAIL, account.getEmail());
         } else {
             attributes.addFlashAttribute(MESSAGE, ERROR_MESSAGE);
             return new RedirectView( request.getContextPath() + "/signIn");

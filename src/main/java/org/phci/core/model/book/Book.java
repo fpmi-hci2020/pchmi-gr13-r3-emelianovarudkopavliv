@@ -1,9 +1,10 @@
-package org.phci.core.model;
+package org.phci.core.model.book;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 public class Book implements Serializable {
-    private Long id;
+    private Integer id;
 
     private String title;
 
@@ -13,24 +14,30 @@ public class Book implements Serializable {
 
     private String description;
 
-    private String price;
+    private BigDecimal price;
+
+    private String publisher;
+
+    private boolean availability;
 
     public Book() { }
 
-    public Book(Long id, String title, String author, String genre, String description, String price) {
+    public Book(Integer id, String title, String author, String genre, String description, BigDecimal price, String publisher, boolean availability) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.description = description;
         this.price = price;
+        this.publisher = publisher;
+        this.availability = availability;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -66,11 +73,27 @@ public class Book implements Serializable {
         this.description = description;
     }
 
-    public String getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public boolean isAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(boolean availability) {
+        this.availability = availability;
     }
 }

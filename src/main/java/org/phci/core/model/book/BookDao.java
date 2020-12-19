@@ -1,11 +1,11 @@
-package org.phci.core.model;
+package org.phci.core.model.book;
 
 import java.io.IOException;
 import java.util.List;
 
 public interface BookDao {
-    Book get(Long key);
+    Book get(Integer key);
     List<Book> findAll(String queryProduct, String searchField);
-    String getBookCover(Long key) throws IOException;
+    String getBookCover(Integer key) throws IOException;
     void save(Book book);
 }

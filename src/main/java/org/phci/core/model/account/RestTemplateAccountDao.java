@@ -1,4 +1,4 @@
-package org.phci.core.model;
+package org.phci.core.model.account;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;

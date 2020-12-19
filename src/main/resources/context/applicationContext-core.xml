@@ -20,15 +20,32 @@
                 <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
                 <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
                 <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.json.GsonHttpMessageConverter"/>
             </list>
         </property>
     </bean>
 
-    <bean id="bookDao" class="org.phci.core.model.RestTemplateBookDao">
+    <bean id="bookDao" class="org.phci.core.model.book.RestTemplateBookDao">
         <property name="restTemplate" ref="restTemplate"/>
     </bean>
 
-    <bean id="accountDao" class="org.phci.core.model.RestTemplateAccountDao">
+    <bean id="accountDao" class="org.phci.core.model.account.RestTemplateAccountDao">
+        <property name="restTemplate" ref="restTemplate"/>
+    </bean>
+
+    <bean id="cartDao" class="org.phci.core.model.cart.RestTemplateCartDao">
+        <property name="restTemplate" ref="restTemplate"/>
+    </bean>
+
+    <bean id="orderDao" class="org.phci.core.model.order.RestTemplateOrderDao">
+        <property name="restTemplate" ref="restTemplate"/>
+    </bean>
+
+    <bean id="favoriteDao" class="org.phci.core.model.favorite.RestTemplateFavoriteDao">
+        <property name="restTemplate" ref="restTemplate"/>
+    </bean>
+
+    <bean id="newsDao" class="org.phci.core.model.news.RestTemplateNewsDao">
         <property name="restTemplate" ref="restTemplate"/>
     </bean>
 

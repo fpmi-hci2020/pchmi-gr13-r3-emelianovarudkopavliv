@@ -1,4 +1,4 @@
-package org.phci.core.model;
+package org.phci.core.model.book;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -30,7 +30,7 @@ public class RestTemplateBookDao implements BookDao {
     }
 
     @Override
-    public Book get(Long key) {
+    public Book get(Integer key) {
         Lock readLock = rwLock.readLock();
         readLock.lock();
         try {
@@ -58,7 +58,7 @@ public class RestTemplateBookDao implements BookDao {
     }
 
     @Override
-    public String getBookCover(Long key) throws IOException {
+    public String getBookCover(Integer key) throws IOException {
         Lock readLock = rwLock.readLock();
         readLock.lock();
         try {
